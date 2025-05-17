@@ -1,1 +1,12 @@
 @import 'tailwindcss';
+
+@utility scrollbar-fancy {
+	&::-webkit-scrollbar {
+		appearance: none;
+		width: 4px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #7b7b86;
+		border-radius: 10px;
+	}
+}
