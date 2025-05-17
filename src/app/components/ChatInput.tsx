@@ -1,14 +1,15 @@
 'use client';
 
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useChatContext } from '../utils/chatContext';
 
 type ChatInputProps = {
 	action: (payload: FormData) => void;
+	isLoading: boolean;
 };
 
-function ChatInput({ action }: ChatInputProps) {
-	const { messages, setMessages } = useChatContext();
+function ChatInput({ action, isLoading }: ChatInputProps) {
+	const { setMessages } = useChatContext();
 	const [query, setQuery] = useState<string>('');
 
 	const textAreaRef = useRef<HTMLTextAreaElement>(null);
@@ -27,8 +28,13 @@ function ChatInput({ action }: ChatInputProps) {
 	const handleSubmit = () => {
 		if (query.trim() === '') return;
 		setMessages((prev) => [...prev, { text: query.trim(), isFromUser: true }]);
-		console.log(messages);
 	};
+
+	useEffect(() => {
+		if (!isLoading) {
+			setQuery('');
+		}
+	}, [isLoading]);
 
 	return (
 		<form
@@ -43,12 +49,13 @@ function ChatInput({ action }: ChatInputProps) {
 				id="query"
 				name="query"
 				value={query}
-				required
+				disabled={isLoading}
 			/>
 			<button
-				className="bg-zinc-900 px-4 py-2 flex items-center text-sm rounded-xl mr-3 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer"
+				className="bg-zinc-900 px-4 py-2 flex items-center text-sm rounded-xl mr-3 hover:scale-105 hover:shadow-lg active:scale-100 disabled:text-zinc-800 disabled:cursor-auto disabled:scale-100 transition-all duration-200 cursor-pointer"
 				type="submit"
 				onClick={handleSubmit}
+				disabled={isLoading}
 			>
 				Send
 			</button>
