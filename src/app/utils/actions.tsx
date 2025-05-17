@@ -4,6 +4,7 @@ export async function getQueryResponse(
 	previousState: string,
 	formData: FormData
 ) {
-	console.log('query', formData);
-	return 'response';
+	await new Promise((resolve) => setTimeout(resolve, 2000));
+	const query = formData.get('query') as string;
+	return query;
 }
