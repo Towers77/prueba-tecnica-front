@@ -1,34 +1,26 @@
-## Getting Started
+# Prueba Tecnica BircleAI
 
-First, run the development server:
+Este proyecto es la interfaz de front correspondiente a [este proyecto](https://github.com/Towers77/prueba-tecnica-backend), para la prueba tecnica de BircleAI
+
+### Requisitos
+
+- Node version >= 20.11.1
+- npm version >= 10.2.4
+
+### Configuracion y ejecucion
+
+1. Clonar el repositorio en local e ingresar al directorio root `/prueba-tecnica-front`
+
+2. Una vez alli, se deben instalar los paquetes y librerias especificados en el archivo `package.json`, para ello ejecutaremos el siguiente comando:
+
+```bash
+npm install
+```
+
+3. Cuando se hallan instalado todos los paquetes/librerias, podemos ejecutar el proyecto en dev mode con el siguiente comando:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Esto iniciara el proyecto en [http://localhost:3000](http://localhost:3000), podemos abrirlo en nuestro navegador para verlo.
