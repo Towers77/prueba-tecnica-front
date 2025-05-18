@@ -34,6 +34,7 @@ function ResizableTextArea({
 			placeholder="Ask anything..."
 			id="query"
 			name="query"
+			value={isDisabled ? '' : value}
 			disabled={isDisabled}
 		/>
 	);
