@@ -2,8 +2,8 @@
 
 import { useActionState, useEffect } from 'react';
 import ChatInput from './components/ChatInput';
-import { useChatContext } from './utils/chatContext';
-import { getQueryResponse } from './utils/actions';
+import { useChatContext } from './context/chatContext';
+import { getQueryResponse } from './actions/getQueryResponse';
 import Chat from './components/Chat';
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
 	return (
 		<main className="h-full w-full mx-4 md:w-2/3 lg:w-1/2 flex flex-col justify-end py-4 md:py-8 gap-4">
 			<Chat isLoading={isLoading} />
-			<ChatInput action={action} isLoading={isLoading} />
+			<ChatInput onSubmitAction={action} isDisabled={isLoading} />
 		</main>
 	);
 }
