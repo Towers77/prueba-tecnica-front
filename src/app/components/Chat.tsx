@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { useChatContext } from '../utils/chatContext';
+import { useChatContext } from '../context/chatContext';
 import ChatBubble from './ChatBubble';
 
 type ChatProps = {
@@ -9,7 +9,7 @@ type ChatProps = {
 };
 
 function Chat({ isLoading }: ChatProps) {
-	const { messages, setMessages } = useChatContext();
+	const { messages } = useChatContext();
 
 	const chatRef = useRef<HTMLDivElement>(null);
 	useEffect(() => {
