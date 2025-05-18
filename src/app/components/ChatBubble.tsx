@@ -6,10 +6,10 @@ type ChatBubbleProps = {
 function ChatBubble({ text, isFromUser }: ChatBubbleProps) {
 	return (
 		<div
-			className={`max-w-2/3 py-3 px-5 break-all text-sm ${
+			className={`max-w-4/5 py-3 px-5 text-wrap text-sm ${
 				isFromUser
-					? 'rounded-t-full rounded-bl-full bg-zinc-800 self-end'
-					: 'rounded-t-full rounded-br-full bg-zinc-700 self-start'
+					? 'rounded-t-xl rounded-bl-xl bg-zinc-800 self-end animate-fade-in-right'
+					: 'rounded-t-xl rounded-br-xl bg-zinc-700 self-start animate-fade-in-left'
 			}`}
 		>
 			{text}
