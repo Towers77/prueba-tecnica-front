@@ -8,6 +8,16 @@ type ResizableTextAreaProps = {
 	isDisabled: boolean;
 };
 
+/**
+ * A resizable text area component that automatically adjusts its height
+ *
+ * @type {Object} ResizableTextAreaProps
+ * @property {function} onChange - The function to call when the text area value changes.
+ * @property {string} value - The current value of the text area.
+ * @property {boolean} isDisabled - Indicates if the text area is disabled.
+ *
+ * @returns {JSX.Element} The rendered ResizableTextArea component.
+ */
 function ResizableTextArea({
 	onChange,
 	value,

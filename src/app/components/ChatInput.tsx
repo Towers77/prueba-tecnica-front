@@ -9,6 +9,16 @@ type ChatInputProps = {
 	isDisabled: boolean;
 };
 
+/**
+ * This component manages sending messages in the chat.
+ *
+ *
+ * @type {Object} ChatInputProps
+ * @property {function} onSubmitAction - The function to call when the form is submitted.
+ * @property {boolean} isDisabled - Indicates if the input is disabled.
+ *
+ * @returns {JSX.Element} The rendered ChatInput component.
+ */
 function ChatInput({ onSubmitAction, isDisabled }: ChatInputProps) {
 	const { setMessages } = useChatContext();
 	const [query, setQuery] = useState<string>('');

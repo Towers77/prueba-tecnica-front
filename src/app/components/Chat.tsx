@@ -8,6 +8,13 @@ type ChatProps = {
 	isLoading: boolean;
 };
 
+/**
+ * This component displays a list of chat messages.
+ *
+ * @param {boolean} isLoading - Indicates if the chat is loading.
+ *
+ * @returns {JSX.Element} The rendered Chat component.
+ */
 function Chat({ isLoading }: ChatProps) {
 	const { messages } = useChatContext();
 

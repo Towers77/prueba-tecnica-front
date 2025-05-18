@@ -3,6 +3,18 @@ type ChatBubbleProps = {
 	isFromUser: boolean;
 };
 
+/**
+ * This component displays a chat message.
+ *
+ * The bubble positioning, as well as the styling depends on
+ * if the message is from the user or not.
+ *
+ * @type {Object} ChatBubbleProps
+ * @property {string} text - The text of the chat message.
+ * @property {boolean} isFromUser - Indicates if the message is from the user.
+ *
+ * @returns {JSX.Element} The rendered ChatBubble component.
+ */
 function ChatBubble({ text, isFromUser }: ChatBubbleProps) {
 	return (
 		<div
