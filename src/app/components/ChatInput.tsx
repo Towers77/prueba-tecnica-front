@@ -12,6 +12,7 @@ function ChatInput({ action, isLoading }: ChatInputProps) {
 	const { setMessages } = useChatContext();
 	const [query, setQuery] = useState<string>('');
 
+	// TODO: Move to a custom hook
 	const textAreaRef = useRef<HTMLTextAreaElement>(null);
 	useLayoutEffect(() => {
 		const textArea =
@@ -48,7 +49,7 @@ function ChatInput({ action, isLoading }: ChatInputProps) {
 				placeholder="Ask anything..."
 				id="query"
 				name="query"
-				value={query}
+				value={isLoading ? '' : query}
 				disabled={isLoading}
 			/>
 			<button

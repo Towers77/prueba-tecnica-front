@@ -4,6 +4,7 @@ type QueryResponseType = {
 	res: string;
 };
 
+// TODO: Handle errors
 export async function getQueryResponse(
 	previousState: string,
 	formData: FormData
